@@ -50,27 +50,25 @@ css:{
 - 安装：`npm install lib-flexible --save`
 - 在main.js中导入`import 'lib-flexible`
 
-# 2、使用element UI
-### 1、引入element ui
-#### 使用vue add elment 的方式自动注入ui,实现按需引入
-`
-vue add element
-`
-
-选择按需加载
-
-`
-Import on demand
-`
-### 2、自定义ui主题颜色
-1、打开element ：[官方在线主题编辑工具](https://elementui.github.io/theme-chalk-preview/#/zh-CN)
-
-2、编辑完成后点击下载主题，将文件解压复制（可重命名）
-
-3、在 **src** 目录下新建 **theme** 文件夹，将文件粘贴进去
-
-4、在 **main.js** 处引入
-
-`
-import '../theme/element-color/index.css'
-`
+# 2、引入Vant ui库
+#### 1、安装
+`npm i vant -S`
+#### 2、自动按需引入
+babel-plugin-import 是一款 babel 插件，它会在编译过程中将 import 的写法自动转换为按需引入的方式
+##### 安装插件
+`npm i babel-plugin-import -D`
+```
+// 对于使用 babel7 的用户，可以在 babel.config.js 中配置
+module.exports = {
+  plugins: [
+    ['import', {
+      libraryName: 'vant',
+      libraryDirectory: 'es',
+      style: true
+    }, 'vant']
+  ]
+};
+// 接着你可以在代码中直接引入 Vant 组件
+// 插件会自动将代码转化为方式二中的按需引入形式
+import { Button } from 'vant';
+```
