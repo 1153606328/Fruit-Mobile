@@ -1,5 +1,9 @@
 # fruit-mall
-水果商城
+水果商城,持续更新
+## 技术栈 
+- 核心部分 vue + vue-route + vuex
+- 脚手架cli4
+- Vant UI组件库
 # 目录结构
 - public
 - src
