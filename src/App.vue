@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <van-nav-bar title="标题" />
+    <van-nav-bar title="标题"  :fixed="true"  :placeholder="true" />
     <router-view />
     <Tabbar/>
   </div>

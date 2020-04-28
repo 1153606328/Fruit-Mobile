@@ -9,15 +9,29 @@
       </van-swipe>
     </div>
     <!-- list列表 -->
-    <van-list v-model="loading" :finished="finished" finished-text="没有更多了" @load="onLoad" class="listBOX">
+    <van-list
+      v-model="loading"
+      :finished="finished"
+      finished-text="没有更多了"
+      @load="onLoad"
+      class="listBOX"
+    >
       <!-- <van-cell v-for="item in list" :key="item" :title="item" /> -->
-      <div class="listItem" v-for="item in list" :key="item">
+      <!-- <div class="listItem" v-for="item in list" :key="item">
         <div class="itemImg"><div class="itemTitle">这里是标题描述这里是标题描述这里是标题描述这里是标题描述这里是标题描述</div></div>
-        <van-row type="flex" justify="space-between">
+        <van-row type="flex" justify="space-between" class="mb5">
           <van-col span="12">价格：100</van-col>
           <van-col span="12">销量: 6</van-col>
         </van-row>
-      </div>
+      </div>-->
+      <van-card
+        num="2"
+        price="2.00"
+        desc="描述信息"
+        title="商品标题"
+        thumb="https://img.yzcdn.cn/vant/ipad.jpeg"
+        v-for="item in list" :key="item"
+      />
     </van-list>
   </div>
 </template>
@@ -62,34 +76,7 @@ export default {
 };
 </script>
 <style lang="less">
-.banner {
-  img {
-    width: 100%;
-  }
-}
-.listBOX{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 10px;
-}
-.listItem{
-  width: 160px;
-  padding: 5px;
-  .itemImg{
-    background-image: url(https://img.yzcdn.cn/vant/empty-image-default.png);
-    height: 160px;
-    background-size: 100%;
-    position: relative;
-  }
-  .itemTitle{
-    position: absolute;
-    bottom: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-  }
+.mb5 {
+  margin-bottom: 5px;
 }
 </style>

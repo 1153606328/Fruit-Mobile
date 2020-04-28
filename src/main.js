@@ -12,7 +12,8 @@ import {
   List,
   Cell, CellGroup,
   Col, Row,
-  Empty 
+  Empty,
+  Card,
  } from 'vant';
 Vue.use(Button);
 Vue.use(NavBar);
@@ -27,6 +28,7 @@ Vue.use(CellGroup);
 Vue.use(Col);
 Vue.use(Row);
 Vue.use(Empty);
+Vue.use(Card);
 
 Vue.config.productionTip = false
 
