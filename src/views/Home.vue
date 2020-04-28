@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <!--轮播图-->
+    <van-search v-model="searchValue" placeholder="请输入搜索关键词" />
     <div class="banner">
       <van-swipe :autoplay="3000" height="200">
         <van-swipe-item v-for="(image, index) in images" :key="index">
@@ -16,14 +17,6 @@
       @load="onLoad"
       class="listBOX"
     >
-      <!-- <van-cell v-for="item in list" :key="item" :title="item" /> -->
-      <!-- <div class="listItem" v-for="item in list" :key="item">
-        <div class="itemImg"><div class="itemTitle">这里是标题描述这里是标题描述这里是标题描述这里是标题描述这里是标题描述</div></div>
-        <van-row type="flex" justify="space-between" class="mb5">
-          <van-col span="12">价格：100</van-col>
-          <van-col span="12">销量: 6</van-col>
-        </van-row>
-      </div>-->
       <van-card
         num="2"
         price="2.00"
@@ -51,7 +44,8 @@ export default {
       ],
       list: [],
       loading: false,
-      finished: false
+      finished: false,
+      searchValue:""
     };
   },
   methods: {

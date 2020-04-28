@@ -14,6 +14,7 @@ import {
   Col, Row,
   Empty,
   Card,
+  Search 
  } from 'vant';
 Vue.use(Button);
 Vue.use(NavBar);
@@ -29,6 +30,7 @@ Vue.use(Col);
 Vue.use(Row);
 Vue.use(Empty);
 Vue.use(Card);
+Vue.use(Search);
 
 Vue.config.productionTip = false
 
